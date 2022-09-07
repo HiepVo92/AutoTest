@@ -1,0 +1,226 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Check landing page",
+        "description": "",
+        "id": "landing-page;check-landing-page",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10801455458,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to landing page",
+            "match": {
+              "location": "step_00_landingPage.navigate_to_landing_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1475397583,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Check UI landing page",
+            "match": {
+              "location": "step_00_landingPage.check_UI_landing_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1959241583,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 7,
+                "value": "#check login button"
+              }
+            ],
+            "line": 8,
+            "name": "Click login button in landing page",
+            "match": {
+              "location": "step_00_landingPage.click_login_button_in_landing_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1290239542,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Go to login page successfully",
+            "match": {
+              "location": "step_00_landingPage.go_to_login_page_successfully()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 643905167,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Click back button in login page",
+            "match": {
+              "location": "step_00_landingPage.click_back_button_in_login_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1062736500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Go to landing page successfully",
+            "match": {
+              "location": "step_00_landingPage.go_to_landing_page_successfully()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 487090000,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 12,
+                "value": "#check login link"
+              }
+            ],
+            "line": 13,
+            "name": "Click login link in landing page",
+            "match": {
+              "location": "step_00_landingPage.click_login_link_in_landing_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1260336292,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Go to login page successfully",
+            "match": {
+              "location": "step_00_landingPage.go_to_login_page_successfully()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 328229041,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Click back button in login page",
+            "match": {
+              "location": "step_00_landingPage.click_back_button_in_login_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1088978958,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Go to landing page successfully",
+            "match": {
+              "location": "step_00_landingPage.go_to_landing_page_successfully()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 437674750,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 17,
+                "value": "#check register button"
+              }
+            ],
+            "line": 18,
+            "name": "Click Register button in landing page",
+            "match": {
+              "location": "step_00_landingPage.click_Register_button_in_landing_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 331092333,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Go to check code page successfully",
+            "match": {
+              "location": "step_00_landingPage.go_to_check_code_page_successfully()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 319555917,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Click back button in check code page",
+            "match": {
+              "location": "step_00_landingPage.click_back_button_in_check_code_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1069869459,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Go to landing page successfully",
+            "match": {
+              "location": "step_00_landingPage.go_to_landing_page_successfully()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1200308125,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Quit browser",
+            "match": {
+              "location": "step_00_landingPage.quit_browser()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Landing page",
+    "description": "",
+    "id": "landing-page",
+    "keyword": "Feature",
+    "uri": "00_LandingPageFLow.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Debug"
+      }
+    ]
+  }
+]
