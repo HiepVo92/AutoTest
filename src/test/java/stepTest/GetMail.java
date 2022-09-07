@@ -12,7 +12,7 @@ public class GetMail {
             emailUtils = new EmailUtils("vohaquanghiep.cld@gmail.com", "hiep10992", "smtp.gmail.com", EmailUtils.EmailFolder.INBOX);
         } catch (Exception e) {
             e.printStackTrace();
-            //Assert.fail(e.getMessage());
+            Assert.fail(e.getMessage());
         }
     }
 
