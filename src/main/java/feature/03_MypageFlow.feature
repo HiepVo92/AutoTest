@@ -1,9 +1,12 @@
+@Debug
 Feature: Mypage page flow
   Scenario: Check mypage page flow
     Given Navigate to landing page
     When Click login button in landing page
-    And Input email and pw correct
+    And Input email and pw correct in login page
     And Click submit button in login page
+    Then Go to healcheck page successfully
+    When Click
     Then Go to mypage page successfully
   Scenario: Check confirm warning button enable/disable
     When Go to mypage page successfully
