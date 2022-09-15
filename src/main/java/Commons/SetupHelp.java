@@ -4,9 +4,7 @@ import DataFile.PropertiesFile;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.Color;
 import org.testng.Assert;
 import org.openqa.selenium.interactions.Actions;
@@ -156,7 +154,7 @@ public class SetupHelp {
             }
         }
         //================ Check go to page successfully
-        public void checkdisp(String locators,String element) {
+        public void checkDisp(String locators,String element) {
             switch (locators.trim().toLowerCase()) {
                 case "xpath" -> {
                     Assert.assertTrue(driver.findElement(By.xpath(PropertiesFile.getPropValue(element))).isDisplayed());

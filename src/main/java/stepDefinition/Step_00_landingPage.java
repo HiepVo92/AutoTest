@@ -4,7 +4,7 @@ import Commons.SetupHelp;
 import DataFile.PropertiesFile;
 import cucumber.api.java.en.*;
 
-public class step_00_landingPage extends SetupHelp {
+public class Step_00_landingPage extends SetupHelp {
 
     @Given("^Navigate to landing page$")
     public void navigate_to_landing_page() throws Throwable {
@@ -16,7 +16,7 @@ public class step_00_landingPage extends SetupHelp {
     @Then("^Check UI landing page$")
     public void check_UI_landing_page() throws Throwable {
         Thread.sleep(1000);
-        checkdisp("class","LDUIclass");
+        checkDisp("class","LDUIclass");
         verifyElementText("css","LDUIbtnlogincss","ログイン");
         verifyElementText("css","LDUIbtnregistercss","カロママプラスWebをはじめる");
         verifyElementText("css","LDUIbtnloginlinkcss","すでに利用を開始している方はログイン");
@@ -37,7 +37,7 @@ public class step_00_landingPage extends SetupHelp {
     @Then("^Go to login page successfully$")
     public void go_to_login_page_successfully() throws Throwable {
         Thread.sleep(1000);
-        checkdisp("css","LGUI");
+        checkDisp("css","LGUI");
         verifyElementText("css","LGUIbtnforgotcss","パスワードをお忘れですか？");
         verifyElementText("css","LGUIbtnsubmitcss","ログインする");
         verifyElementText("css","LGUIbtnbackcss","戻る");
@@ -53,7 +53,7 @@ public class step_00_landingPage extends SetupHelp {
     @Then("^Go to landing page successfully$")
     public void go_to_landing_page_successfully() throws Throwable {
         Thread.sleep(1000);
-        checkdisp("class","LDUIclass");
+        checkDisp("class","LDUIclass");
     }
 
     @When("^Click login link in landing page$")

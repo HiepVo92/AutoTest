@@ -2,11 +2,9 @@
 package stepDefinition;
 
 import Commons.SetupHelp;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.*;
-import org.openqa.selenium.By;
 
-public class step_02_register extends SetupHelp {
+public class Step_02_register extends SetupHelp {
 
     @Then("^Check select box of invitation code and pass code$")
     public void check_select_box_of_invitation_code_and_pass_code() throws Throwable {

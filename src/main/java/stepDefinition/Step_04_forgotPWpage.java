@@ -7,7 +7,7 @@ import cucumber.api.java.en.*;
 //================================CHANGE NEW PASS ROW 251================================
 
 
-public class step_04_forgotPWpage extends SetupHelp {
+public class Step_04_forgotPWpage extends SetupHelp {
     @When("^Check label text box forgot$")
     public void check_label_text_box_forgot() throws Throwable {
         PropertiesFile.setPropertiesFile();

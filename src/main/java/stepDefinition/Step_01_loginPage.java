@@ -6,17 +6,19 @@ import cucumber.api.java.en.*;
 
 //Change email STG or DEV================================= 14 -15
 
-public class step_01_loginPage extends SetupHelp {
+public class Step_01_loginPage extends SetupHelp {
     @When("^Input email and pw correct in login page$")
     public void Input_email_and_pw_correct_in_login_page() throws Throwable {
         clearText("id","LGemailID");
         clearText("id","LGpassID");
         inputText("id","LGemailID",PropertiesFile.getPropValue("LGemaildata"));
         inputText("id","LGpassID","Password123");
+
     }
     @When("^Click submit button in login page$")
     public void Click_submit_button_in_login_page() throws Throwable {
         clickElement("class","LGbtnsubmitClass");
+        Thread.sleep(5000);
 //        Thread.sleep(1000);
 //        clickElement("class","LGbtnsubmitClass");
     }
@@ -27,7 +29,7 @@ public class step_01_loginPage extends SetupHelp {
     @Then ("^Go to forgot password page successfully$")
     public void Go_to_forgot_password_page_successfully() throws Throwable {
         Thread.sleep(1000);
-        checkdisp("class", "FGUIClass");
+        checkDisp("class", "FGUIClass");
         verifyElementText("css","FGUIbtnbackcss","戻る");
         verifyElementText("css","FGUItitlecss","パスワード再設定");
         verifyElementText("css","FGUItextcss","本人であることを確認するために、パスワード再設定のための認証コードをお送りします。\n" +
@@ -139,7 +141,7 @@ public class step_01_loginPage extends SetupHelp {
     @Then ("^Label and placeholder display correct$")
     public void Then_Label_and_placeholder_display_correct()throws Throwable{
         // email text box
-        verifyPlaceHolderAttribute("id","LGemailplaceholderID","placeholder","username@calomama.com");
+        verifyPlaceHolderAttribute("id","LGemailplaceholderID","placeholder","user@calomama.com");
         verifyLabeltextbox("xpath","LGemaillabelX","メールアドレスを入力");
         // password text box
         verifyPlaceHolderAttribute("id","LGpasswordplaceholderID","placeholder","パスワードを入力");
