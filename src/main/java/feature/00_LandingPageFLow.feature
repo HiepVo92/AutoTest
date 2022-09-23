@@ -1,6 +1,6 @@
 
 Feature: Landing page
-@Test
+
   Scenario: Check landing page
     Given Navigate to landing page
     Then Check UI landing page

@@ -56,7 +56,6 @@ Feature: Login cognito flow
     When Go to login page successfully
     And Input email and pw correct in login page
     And Click submit button in login page
-    Then Go to MFA page successfully
     And Quit browser
 
 

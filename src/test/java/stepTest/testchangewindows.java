@@ -1,7 +1,6 @@
 package stepTest;
 import Commons.SetupHelp;
 import DataFile.PropertiesFile;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.*;
@@ -19,20 +18,14 @@ public class testchangewindows extends SetupHelp {
     public void navigate_to_page() throws Throwable {
         PropertiesFile.setPropertiesFile();
         openURL(PropertiesFile.getPropValue("browser"), "https://stg-cmplus-api-iss-cognito.stg-kawaru.jp/web/views/user/login");
-        clickElement("class",PropertiesFile.getPropValue("LGbtnsubmitClass"));
         Thread.sleep(1000);
-        checkColor("id","email-error","#ff0000");
 
-        //inputText("id", "email", "hiepteststg10.1@yopmail.com");
-        //clickElement("xpath","//button[@id='submit-btn']");
-        //inputText("id", "password", "Password123");
     }
     @Test(priority = 2)
-        public void click() throws Throwable{
-        clickElement("xpath",PropertiesFile.getPropValue("LGbtnforgotX"));
-        inputText("id", "email", "hiepstg1.1@mailsac.com");
-        //Thread.sleep(2000);
-        clickElement("xpath","FGbtnsubmitX");
+        public void click1() throws Throwable{
+//        clickElement("xpath",PropertiesFile.getPropValue("LGbtnforgotX"));
+//        inputText("id", "email", "hiepstg1.1@mailsac.com");
+//        clickElement("xpath","FGbtnsubmitX");
         //Thread.sleep(2000);
 
     }
@@ -40,14 +33,16 @@ public class testchangewindows extends SetupHelp {
     @Test(priority = 3)
     public void getconfirmcode() throws Throwable {
         jsExecutor = (JavascriptExecutor) driver;
-        jsExecutor.executeScript("window.open('https://mailsac.com/','_blank');");
+        jsExecutor.executeScript("window.open('https://accounts.google.com/','_blank');");
         ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
         //Switch qua tab mailsac.com vừa mở
         driver.switchTo().window(tabs.get(1));
         Thread.sleep(3000);
-        driver.findElement(By.xpath( "//input[@placeholder='anything']")).sendKeys("hiepstg1.1");
-        driver.findElement(By.xpath( "//button[normalize-space()='Check the mail!']")).click();
+        driver.findElement(By.xpath( "//input[@id='identifierId']")).sendKeys("linkcom.qc.at");
+        driver.findElement(By.xpath( "//span[normalize-space()='Next']")).click();
         Thread.sleep(2000);
+        driver.findElement(By.xpath( "//input[@name='Passwd']")).sendKeys("Linkcom@123");
+        driver.findElement(By.xpath( "//span[normalize-space()='Next']")).click();
         driver.navigate().refresh();
         driver.findElement(By.xpath("(//td[@class='col-xs-4'])[1]")).click();
         emailContent = driver.findElement(By.xpath("(//div[@class='ng-binding ng-scope'])[1]")).getText();
@@ -80,7 +75,7 @@ public class testchangewindows extends SetupHelp {
 
 
             //Điền confirmation code
-//            driver.findElement(By.xpath("//input[@name='char-1']")).sendKeys(PropertiesFile.getPropValue("RGnumber1"));
+//        driver.findElement(By.xpath("//input[@name='char-1']")).sendKeys(PropertiesFile.getPropValue("RGnumber1"));
 //        driver.findElement(By.xpath("//input[@name='char-2']")).sendKeys(PropertiesFile.getPropValue("RGnumber2"));
 //        driver.findElement(By.xpath("//input[@name='char-3']")).sendKeys(PropertiesFile.getPropValue("RGnumber3"));
 //        driver.findElement(By.xpath("//input[@name='char-4']")).sendKeys(PropertiesFile.getPropValue("RGnumber4"));

@@ -8,9 +8,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.Color;
 import org.testng.Assert;
 import org.openqa.selenium.interactions.Actions;
+
+import java.io.IOException;
+import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static com.gmail.api.GmailAPI.getGmailService;
+import static com.gmail.api.GmailAPI.getMailBody;
 
 
 public class SetupHelp {
@@ -401,6 +407,27 @@ public class SetupHelp {
                 }
             }
 
+        }
+        //=============== Mở trang trước trong nhật ký duyệt web của bạn cho thẻ hiện tại
+            public void backBrowser (){
+                Actions actions = new Actions(driver);
+                actions.keyDown(Keys.COMMAND).sendKeys(Keys.ARROW_LEFT).build().perform();
+                actions.keyUp(Keys.COMMAND).build().perform();
+            }
+            //===== click ====
+            public void click (){
+                Actions actions = new Actions(driver);
+                actions.click().build().perform();
+            }
+            // ==== sendkey actions ==
+            public void sendKeyAction(String value){
+                Actions actions = new Actions(driver);
+                actions.sendKeys(value).build().perform();
+            }
+            //======== Get Code SMS MFA ====
+        public void getCodeSMS () throws GeneralSecurityException, IOException {
+            getGmailService();
+            getMailBody("l.nguyen@linkncom.co.jp");
         }
 
             //=================== QUIT browser ==============

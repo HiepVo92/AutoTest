@@ -132,12 +132,6 @@ public class Step_01_loginPage extends SetupHelp {
         clearText("id","LGemailID");
         clearText("id","LGpassID");
     }
-//    @Then ("^email and pw show error msg correct$")
-//    public void email_and_pw_show_error_msg_correct() throws Throwable{
-//        Thread.sleep(2000);
-//        verifyElementText("xpath","LGemailerror","メールアドレスを入力してください。");
-//        verifyElementText("id","LGpasserrorID","パスワードを入力してください。");
-//    }
     @Then ("^Label and placeholder display correct$")
     public void Then_Label_and_placeholder_display_correct()throws Throwable{
         // email text box
